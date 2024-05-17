@@ -13,7 +13,7 @@ const PredictionLine = ({
     </div>
     <div className={style.PredictionLine__temp}>{`${value.value} °C`}</div>
     <div className={style.PredictionLine__date}>
-      {dayjs(value.data).format('ddd, D MMM')}
+      {dayjs(value.data).format('ddd, D MMM hh:mm')}
     </div>
   </div>
 );
