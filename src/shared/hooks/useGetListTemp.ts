@@ -16,7 +16,7 @@ export default function useGetListTemp() {
     }
   };
   const { data: currentData } = useSWR(todosEndpoint, getData, {
-    refreshInterval: 10000,
+    refreshInterval: 30000,
   });
 
   return {
