@@ -1,0 +1,29 @@
+@import '../../../app/styles/utils/variables.scss';
+
+.prediction {
+  min-width: 415px;
+  padding: 18px 30px 5px;
+  background: $noThemeBg;
+  border-radius: 30px;
+  color: $noThemeColor;
+  box-shadow: 8px 6px 4px rgba(0, 0, 0, 0.5);
+  @media (max-width: $laptop) {
+    min-width: unset;
+    padding: 15px 20px 5px;
+  }
+  &__title {
+    margin-bottom: 5px;
+    text-align: center;
+    font: 700 24px/1.33 $font;
+    @media (max-width: $laptop) {
+      font-size: 22px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 20px;
+    }
+  }
+  &__content {
+    display: grid;
+    gap: 2px;
+  }
+}

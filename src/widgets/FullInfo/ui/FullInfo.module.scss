@@ -1,0 +1,122 @@
+@import '../../../app/styles/utils/variables.scss';
+
+.FullInfo {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  padding: 30px 25px;
+  gap: 26px;
+  background: $noThemeBg;
+  border-radius: 30px;
+  color: $noThemeColor;
+  box-shadow: 8px 6px 4px rgba(0, 0, 0, 0.5);
+  @media (max-width: $laptop) {
+    padding: 20px 16px;
+  }
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 15px 24px 30px;
+  }
+  &__left {
+    display: grid;
+    align-content: space-between;
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 30px;
+    }
+  }
+  &__sun {
+    display: grid;
+    gap: 25px;
+    &Rise,
+    &Set {
+      display: flex;
+      gap: 11px;
+    }
+    &Image {
+      width: 48px;
+      height: 48px;
+    }
+    &Title {
+      margin-bottom: 5px;
+      color: $textFullInfo;
+      font: 700 20px/1.33 $font;
+    }
+    &Time {
+      color: $textFullInfo;
+      font: 600 16px/1.33 $font;
+    }
+  }
+  &__weatherImage {
+    width: 100%;
+    max-width: 270px;
+    min-width: 200px;
+    img {
+      width: 100%;
+    }
+  }
+  &__weatherTitle {
+    text-align: center;
+    color: $textFullInfo;
+    font: 700 32px/1.33 $font;
+  }
+  &__icon {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    color: $noThemeColor;
+    margin-bottom: 10px;
+  }
+  &__value {
+    font: 600 20px/1.33 $font;
+    color: $textFullInfo;
+    margin-bottom: 15px;
+  }
+  &__title {
+    color: $textFullInfo;
+    font: 500 16px/1.33 $font;
+  }
+}
+
+html[data-theme='dark'] {
+  .FullInfo {
+    &__temp {
+      background: linear-gradient(
+        84.4deg,
+        #ffffff -16.56%,
+        rgba(255, 255, 255, 0) 118.43%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    &__sun {
+      img:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+html[data-theme='light'] {
+  .FullInfo {
+    &__temp {
+      background: linear-gradient(
+        80.34deg,
+        #292929 -2.93%,
+        rgba(255, 255, 255, 0) 212.44%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    &__sun {
+      img:first-child {
+        display: none;
+      }
+    }
+  }
+}

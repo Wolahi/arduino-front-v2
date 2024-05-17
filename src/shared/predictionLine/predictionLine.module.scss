@@ -1,0 +1,30 @@
+@import '../../app/styles/utils/variables';
+
+.PredictionLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  font: 700 18px/1.33 $font;
+  @media (max-width: $laptop) {
+    justify-content: center;
+  }
+  @media (max-width: $mobile) {
+    gap: 10px;
+    font-size: 16px;
+  }
+  &__image {
+    width: 60px;
+    height: 60px;
+    @media (max-width: $mobile) {
+      width: 48px;
+      height: 46px;
+    }
+  }
+  &__temp {
+    color: $noThemeColor;
+  }
+  &__date {
+    color: $noThemeColor;
+  }
+}

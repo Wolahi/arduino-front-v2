@@ -1,0 +1,22 @@
+@import '../../app/styles/utils/variables';
+
+.today__date {
+  font: 40 18px/1.33 $font;
+  @media (max-width: $laptop) {
+    font-size: 16px;
+  }
+}
+
+.today__wrap {
+  margin-top: auto;
+}
+
+.today__time {
+  font: 700 86px/1.2 $font;
+  @media (max-width: $laptop) {
+    font-size: 72px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 60px;
+  }
+}

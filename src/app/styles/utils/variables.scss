@@ -1,0 +1,34 @@
+@import './fonts.scss';
+
+html[data-theme='dark'] {
+  --bg: linear-gradient(110.05deg, #383838 0%, rgba(158, 158, 158, 0) 71.82%);
+  --noThemeColor: #fff;
+  --noThemeBg: #444444;
+  --textFullInfo: rgba(255, 255, 255, 0.8);
+}
+
+html[data-theme='light'] {
+  --bg: linear-gradient(315deg, #b4c6a6, #ffffff, #b4c6a6);
+  --noThemeColor: #000;
+  --noThemeBg: #e4e7e1;
+  --textFullInfo: #292929;
+}
+
+// fonts
+$font: 'Poppins', 'Arial', sans-serif;
+$fontUbuntu: 'Ubuntu', 'Arial', sans-serif;
+
+//colors
+$black: #000;
+$white: #fff;
+$greyBlack: #4d4d4d;
+$grey: #d9d9d9;
+$bg: var(--bg);
+$noThemeColor: var(--noThemeColor);
+$noThemeBg: var(--noThemeBg);
+$textBg: vat(--textBg);
+$textFullInfo: var(--textFullInfo);
+
+//media
+$laptop: 1259px;
+$mobile: 767px;

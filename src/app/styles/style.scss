@@ -1,0 +1,153 @@
+@import '/node_modules/normalize.css/normalize.css';
+@import './utils/variables.scss';
+
+:root {
+  --inner-pd: 24px;
+  @media (max-width: $laptop) {
+    --inner-pd: 18px;
+  }
+  @media (max-width: $mobile) {
+    --inner-pd: 16px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1;
+  scroll-behavior: smooth;
+  text-rendering: unset;
+  -webkit-font-smoothing: unset;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: ease 0.3s;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+span,
+ul,
+li,
+tr,
+td,
+th,
+table,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  margin: 0;
+}
+
+p {
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
+
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: $bg;
+  font-family: $font;
+  color: $black;
+  .inner {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--inner-pd);
+  }
+  main {
+    flex: 1 0;
+    padding: 65px;
+    @media (max-width: $laptop) {
+      padding: 50px;
+    }
+    @media (max-width: $mobile) {
+      padding: 40px;
+    }
+  }
+  .section {
+    &:not(:first-child) {
+      margin-top: 50px;
+      @media (max-width: $laptop) {
+        margin-top: 40px;
+      }
+      @media (max-width: $mobile) {
+        margin-top: 30px;
+      }
+    }
+  }
+  .text {
+    &-mob-none {
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+    &-mob-only {
+      display: none;
+      @media (max-width: $mobile) {
+        display: block;
+      }
+    }
+    &-light {
+      font-weight: 300;
+    }
+    &-normal {
+      font-weight: 400;
+    }
+    &-bold {
+      font-weight: 700;
+    }
+    &-center {
+      text-align: center;
+    }
+    &-right {
+      text-align: right;
+    }
+    &-black {
+      color: $black;
+    }
+    &-white {
+      color: $white;
+    }
+  }
+}

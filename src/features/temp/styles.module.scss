@@ -1,0 +1,13 @@
+@import '../../app/styles/utils/variables';
+
+.FullInfo__temp {
+  font: 700 80px/1.2 $font;
+}
+.FullInfo__tempFeels {
+  color: $textFullInfo;
+  font: 600 20px/1.33 $font;
+  span {
+    margin-left: 8px;
+    font-size: 32px;
+  }
+}

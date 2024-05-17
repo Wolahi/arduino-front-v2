@@ -1,0 +1,31 @@
+@import '../../app/styles/utils/variables';
+
+.branching {
+  margin-top: 50px;
+  color: $noThemeColor;
+  &__title {
+    margin-bottom: 40px;
+    font: 700 24px/1.33 $font;
+    @media (max-width: $laptop) {
+      margin-bottom: 30px;
+      font-size: 22px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+  }
+  &__name {
+    display: block;
+    font: 400 18px/1.33 $fontUbuntu;
+    @media (max-width: $laptop) {
+      font-size: 16px;
+    }
+    &:hover {
+      color: $greyBlack;
+    }
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}

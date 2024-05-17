@@ -1,0 +1,55 @@
+@import '../../app/styles/utils/variables';
+
+.HourlyForecastColumn {
+  display: grid;
+  justify-items: center;
+  padding: 15px 25px 20px;
+  text-align: center;
+  border-radius: 40px;
+  color: $noThemeColor;
+  &__time {
+    font: 600 26px/1.33 $font;
+  }
+  &__weatherIcon {
+    width: 80px;
+    height: 80px;
+    @media (max-width: $mobile) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &__temp {
+    font: 600 22px/1.33 $font;
+  }
+  &__image {
+    width: 55px;
+    height: 55px;
+    @media (max-width: $mobile) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__speed {
+    font: 600 26px/1.33 $font;
+  }
+  &.day {
+    background: linear-gradient(
+      170.72deg,
+      #f88508 -12.41%,
+      rgba(246, 250, 217, 0) 163.32%
+    );
+  }
+  &.night {
+    background: linear-gradient(
+      173.7deg,
+      #443d64 -15.92%,
+      rgba(101, 130, 198, 0) 192.45%
+    );
+  }
+}
+
+html[data-theme='dark'] {
+  .HourlyForecastColumn {
+    background: #373636;
+  }
+}

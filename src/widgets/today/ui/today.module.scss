@@ -1,0 +1,19 @@
+@import '../../../app/styles/utils/variables.scss';
+
+.today {
+  display: grid;
+  padding: 50px 110px;
+  background: $noThemeBg;
+  border-radius: 30px;
+  color: $noThemeColor;
+  text-align: center;
+  border: 1px solid $black;
+  box-shadow: 8px 6px 4px rgba(0, 0, 0, 0.5);
+  @media (max-width: $laptop) {
+    padding: 40px 70px;
+  }
+  @media (max-width: $mobile) {
+    grid-column: span 2;
+    padding: 30px;
+  }
+}

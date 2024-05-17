@@ -1,0 +1,11 @@
+@import '../../app/styles/utils/variables';
+
+.today__city {
+  font: 700 24px/1.33 $font;
+  @media (max-width: $laptop) {
+    font-size: 22px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 20px;
+  }
+}

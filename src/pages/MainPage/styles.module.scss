@@ -1,0 +1,19 @@
+@import '../../app/styles/utils/variables';
+
+.main {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 55px;
+    @media (max-width: $laptop) {
+      max-width: 768px;
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+      gap: 40px 0;
+    }
+    @media (max-width: $mobile) {
+      max-width: unset;
+      gap: 20px 0;
+    }
+  }
+}
