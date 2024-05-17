@@ -4,16 +4,20 @@ import useSWR from 'swr';
 export default function useGetListTemp() {
   const todosEndpoint = 'https://arduinoserv.onrender.com/temp/list';
 
-  // eslint-disable-next-line consistent-return
-  const getData = async () => {
+  const getData = async (
+    url: string,
+  ): Promise<{ id: number; value: number; data: string }[]> => {
     try {
-      const response = await axios.get(todosEndpoint);
+      const response = await axios.post(url);
       return response.data;
     } catch (error) {
       console.error('Error fetching data:', error);
+      return [];
     }
   };
-  const { data: currentData } = useSWR(todosEndpoint, getData);
+  const { data: currentData } = useSWR(todosEndpoint, getData, {
+    refreshInterval: 10000,
+  });
 
   return {
     tempList: currentData,
